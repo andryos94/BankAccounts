@@ -1,9 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        BankAccount b1 = new BankAccount(Currency.USD,100.0,"Vasile");
-        BankAccount b2 = new BankAccount(Currency.USD,1000.0,"Nicu");
-        BankAccount b3 = new BankAccount(Currency.USD,50.4,"Andreea");
-        BankAccount b4 = new BankAccount(Currency.USD,0,"Ion");
+        BankAccount b1 = new BankAccount(Currency.USD,100.0,"Vasile", "4388576018402626");
+        BankAccount b2 = new BankAccount(Currency.USD,1000.0,"Nicu", "48902");
+        BankAccount b3 = new BankAccount(Currency.USD,50.4,"Andreea", "358576018402626");
+        BankAccount b4 = new BankAccount(Currency.USD,0,"Ion", "4388576018402621");
+
+        b1.verifyCreditCard(b1.getCreditCardNumber());
+        System.out.println("*********");
+        b2.verifyCreditCard(b2.getCreditCardNumber());
+        System.out.println("*********");
+        b3.verifyCreditCard(b3.getCreditCardNumber());
+        System.out.println("*********");
+        b4.verifyCreditCard(b4.getCreditCardNumber());
+        System.out.println("*********");
 
         System.out.println(b1.toString());
         System.out.println(b2.toString());
